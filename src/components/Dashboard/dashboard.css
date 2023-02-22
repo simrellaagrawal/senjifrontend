@@ -1,0 +1,120 @@
+.content {
+}
+.sidebar {
+  padding: 50px 5px 0px;
+  background-color: #f1dbbf;
+  height: 100%;
+}
+
+.sidebar h2 {
+  font-family: "Dancing Script", cursive;
+  font-weight: 700;
+  /* text-transform: uppercase; */
+  text-align: center;
+}
+.sidebar .nav {
+  padding: 40px 0px;
+}
+.sidebar .nav-link {
+  color: #aa5656;
+  font-weight: 100;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  letter-spacing: 1px;
+}
+.sidebar .nav-link:hover {
+  background-color: #aa5656a4;
+  color: #f1dbbf;
+}
+.sidebar .nav-pills .nav-link.active {
+  background-color: #aa5656;
+}
+.nav-link:focus {
+  background-color: #aa5656;
+}
+.sidebar .nav-item {
+  padding: 5px 0px;
+}
+/* Dashboard */
+.dashboard {
+  /* padding-top: 30px; */
+}
+.dashboard .box {
+  width: 100%;
+  height: 130px;
+  border: 1px solid rgba(216, 215, 215, 0.396);
+  border-radius: 5px;
+  padding: 20px;
+  background-color: #f1dbbf;
+}
+.dashboard .col {
+  padding: 5px;
+}
+
+.dashboard .box p {
+  color: #698269;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+}
+.dashboard h4 {
+  font-size: 30px;
+  color: #aa5656;
+  margin: 4px 0;
+}
+.dashboard a {
+  color: #aa5656;
+  font-size: 15px;
+}
+.dashboard .box-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.charts .area-chart {
+  margin-top: 14px;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #f1dbbf;
+  border-radius: 5px;
+}
+.charts .area-top , .dashtables .area-top{
+  background: #f1dbbf;
+}
+.charts hr,
+.dashtables hr {
+  width: 100%;
+  color: rgb(216, 215, 215);
+  margin: 0;
+  padding: 0;
+}
+.charts .area {
+  /* padding: 20px; */
+  margin: 20px 0 0 10px;
+}
+.charts p,
+.dashtables p {
+  /* margin: 10px 25px; */
+  padding-top: 10px;
+  font-weight: 500;
+  font-size: 18px;
+  color: #698269;
+}
+.dashtable .table{
+  margin: 0;
+  box-shadow: none;
+  border-radius: 0px;
+}
+.dashtables .dashtable {
+  margin-top: 30px;
+  width: 100%;
+  /* height: 100%; */
+  border: 1px solid #f1dbbf;
+  border-radius: 5px;
+}
+.userTable {
+  margin-top: 100px;
+  border-radius: 0px !important ;
+}

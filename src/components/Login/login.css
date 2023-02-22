@@ -1,0 +1,75 @@
+.login {
+  background-color: #b99b6b;
+  height: 350px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login h1 {
+  /* color: #aa5656; */
+
+}
+.login .box {
+  position: absolute;
+  width: 430px;
+  background-color: white;
+  border: 1px solid rgb(216, 216, 216);
+  top: 180px;
+  text-align: center;
+  padding: 30px;
+  border-radius: 5px;
+}
+.login h3 {
+  padding: 10px 0 10px;
+  /* color: #F1DBBF; */
+  color: #698269;
+}
+.login input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid rgb(185, 184, 184);
+}
+.login .btn {
+  width: 100%;
+  border-radius: 0px;
+  margin: 10px 0;
+  color: #698269;
+  border-color: #698269;
+}
+.login .btn:hover {
+  background-color: #698269;
+  border-color: #698269;
+}
+.login .link {
+  text-decoration: none;
+  color: inherit;
+}
+.login .checkbox {
+  /* width: 100px; */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+}
+input[type="checkbox" i] {
+  width: 20px;
+  padding: 0;
+  margin: 0;
+}
+.register .box {
+  top: 60px;
+}
+footer {
+  height: 60px;
+  background-color: #b99b6b;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+footer p {
+  padding-top: 20px;
+}

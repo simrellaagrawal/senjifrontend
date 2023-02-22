@@ -1,0 +1,145 @@
+.userHome .navbar-brand {
+  font-weight: 700;
+  font-family: "Dancing Script", cursive;
+  font-size: 35px;
+  padding-left: 30px;
+  color: #f1dbbf;
+  /* font-family: 'Source Sans Pro', sans-serif; */
+}
+.userHome .navbar {
+  background-color: #aa5656;
+}
+.userHome .nav-link {
+  color: #f1dbbf;
+  font-size: 20px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.userHome .btn:hover {
+  background-color: #f1dbbf;
+  border: 0px;
+  color: #aa5656;
+}
+/* upload page */
+.upload {
+  margin-top: 50px;
+}
+.upload h3 {
+  font-family: "Times New Roman", Times, serif;
+  color: #b99b6b;
+}
+.upload hr {
+  margin-bottom: 40px;
+  margin-top: 0;
+  width: 400px;
+  border: 1px solid black;
+}
+.upload .btn {
+  background-color: white;
+  border-color: #698269;
+  color: #698269;
+}
+.upload .btn.active {
+  color: #698269;
+}
+.upload .btn:hover {
+  background-color: #698269;
+  border-color: #698269;
+}
+.upload .form-control:focus {
+  border-color: #698269;
+  box-shadow: none;
+}
+.upload .file-picker {
+  width: 33%;
+}
+.upload .form-label {
+  color: #698269;
+  font-weight: 600;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+/* single Product */
+.product {
+  margin-top: 50px;
+}
+.product h3 {
+  font-family: "Times New Roman", Times, serif;
+  color: #b99b6b;
+}
+.product hr {
+  margin-bottom: 10px;
+  margin-top: 0;
+  width: 400px;
+  border: 1px solid black;
+}
+.product .product-details {
+  margin-top: 50px;
+}
+.product .left p {
+  color: #698269;
+  /* font-weight: 600; */
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin: 3px;
+}
+.product .right p {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin: 3px;
+}
+
+.product .product-img {
+  border: 1px solid #f1dbbf;
+  margin: 35px 108px 0 0;
+}
+.product img {
+  width: 100%;
+  padding: 40px;
+  height: 500px;
+  object-fit: contain;
+}
+
+/* Payment */
+.plan{
+  margin-top: 50px;
+}
+.plan h3{
+  font-family: "Times New Roman", Times, serif;
+  color: #b99b6b;
+  font-size: 40px;
+  margin-left: 50px;
+  /* text-align: center; */
+}
+.plan hr{
+  margin: 0 0 40px 50px;
+  width: 200px;
+  border: 1px solid black;
+}
+.plan .box{
+  border: 1px solid #698269;
+  border-radius: 5px;
+  padding: 50px 20px;
+  height: 400px;
+  margin: 30px;
+  text-align: center;
+  color: #f1dbbf;
+  background-color: #698269;
+}
+.plan .box .top{
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+.plan .box p{
+  margin-top: 30px;
+  font-size: 12px;
+}
+.plan .box .btn{
+  margin-top: 30px;
+  color: #698269;
+  background-color: #f1dbbf;
+  border: 1px solid #f1dbbf;
+}
+.plan .box .btn:hover{
+  color: #f1dbbf;
+  background-color: #698269;
+  border: 1px solid #f1dbbf;
+}

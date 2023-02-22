@@ -1,0 +1,35 @@
+hr {
+  width: 100%;
+  color: rgb(216, 215, 215);
+  margin: 0;
+  padding: 0;
+}
+p {
+  margin: 10px 25px;
+  font-weight: 500;
+  font-size: 18px;
+}
+.tablecell {
+  padding: 10px;
+  font-weight: 100 !important;
+  font-size: 14px;
+  text-align: center;
+  /* background-color: #f1dbbf; */
+  color: #aa5656 !important;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif !important;
+}
+.tablecelltitle {
+  font-weight: 600;
+  /* background-color: rgb(184, 237, 237); */
+  color: #f1dbbf !important;
+  background-color: #aa5656;
+  text-align: center;
+}
+/* UserTAble */
+.box {
+  margin-top: 20px;
+}
+.table {
+  margin: 20px 20px 0 0;
+}
