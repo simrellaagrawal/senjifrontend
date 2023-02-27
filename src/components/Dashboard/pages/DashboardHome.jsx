@@ -20,9 +20,10 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
-import EnhancedTable from "../common/Usertable";
-import Dashboardtable from "../common/Dashboardtable";
+import Dashboardtable from "../common/UserTable";
 import Producttable from "../common/Producttable";
+import UserTable from "../common/UserTable";
+import AdminNav from "../AdminDashboard";
 
 function DashboardHome() {
   const data = [
@@ -110,6 +111,7 @@ function DashboardHome() {
 
   return (
     <>
+    <AdminNav />
       <div className="dashboard">
         {/* <Container> */}
         <Row>
@@ -163,7 +165,7 @@ function DashboardHome() {
               </div>
               <AreaChart
                 className="area"
-                width={700}
+                width={830}
                 height={250}
                 data={data}
                 margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
@@ -201,11 +203,11 @@ function DashboardHome() {
           </Col>
           <Col lg={5}>
             <div className="area-chart">
-            <div className="area-top">
+              <div className="area-top">
                 <p>Products</p>
                 <hr />
               </div>
-              <BarChart width={470} height={250} data={data1} className="area">
+              <BarChart width={560} height={250} data={data1} className="area">
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="name" />
                 <YAxis />
@@ -220,16 +222,16 @@ function DashboardHome() {
         <Row className="dashtables">
           <Col lg={6}>
             <div className="dashtable">
-            <div className="area-top">
+              <div className="area-top">
                 <p>Users</p>
                 <hr />
               </div>
-              <Dashboardtable />
+              <UserTable />
             </div>
           </Col>
           <Col lg={6}>
             <div className="dashtable">
-            <div className="area-top">
+              <div className="area-top">
                 <p>Products</p>
                 <hr />
               </div>

@@ -1,0 +1,14 @@
+.about {
+  margin: 50px 0;
+}
+
+.about h3 {
+  font-family: "Times New Roman", Times, serif;
+  color: #b99b6b;
+}
+.about hr {
+  margin-bottom: 40px;
+  margin-top: 0;
+  width: 200px;
+  border: 1px solid #698269;
+}

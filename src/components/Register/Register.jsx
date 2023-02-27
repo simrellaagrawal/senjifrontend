@@ -3,6 +3,7 @@ import Button from "react-bootstrap/esm/Button";
 import "../Login/login.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import HomeNav from "../home/HomeNav";
 
 export default function Register() {
   const navigate = useNavigate();
@@ -18,71 +19,98 @@ export default function Register() {
     setError(false);
     try {
       axios
-        .post("/auth/register", {
-          username: username,
-          phone: phone,
-          email:email,
+        .post("http://localhost:5000/api/auth/verify", {
           otp: otp,
         })
         .then((response) => {
-          navigate("/");
+          navigate("/dashboard");
         });
-      setUsername("");
-      setPhone("");
-      setEmail("");
-      setOtp("");
+      // setUsername("");
+      // setPhone("");
+      // setEmail("");
+      // setOtp("");
     } catch (err) {
       setError(true);
+      console.log(err.message);
     }
+  };
+
+  const verify = () => {
+    setShow(true);
+
+    axios
+      .post("http://localhost:5000/api/auth/register", {
+        username: username,
+        phone: phone,
+        email: email,
+      })
+      .then((response) => {
+        console.log(response);
+      });
   };
   return (
     <>
+      <HomeNav />
       <div className="login register">
         <div className="box">
           <h3>Registration</h3>
           <form onSubmit={handleSubmit}>
-            <input type="text" placeholder="Username"
-            value={username}
-            onChange={(e)=>{
-              setUsername(e.target.value);
-            }}
-             required />
-            <input type="number" placeholder="Phone number"
-             value={phone}
-             onChange={(e)=>{
-               setPhone(e.target.value);
-             }} required />
-            <input type="email" placeholder="Email(optional)" 
-            value={email}
-            onChange={(e)=>{
-              setEmail(e.target.value);
-            }}
-            required />
+            <input
+              type="text"
+              placeholder="Username"
+              value={username}
+              onChange={(e) => {
+                setUsername(e.target.value);
+              }}
+              required
+            />
+            <input
+              type="tel"
+              pattern="\+91\d{10}"
+              placeholder="+91 XXXXXXXXXX"
+              value={phone}
+              onChange={(e) => {
+                setPhone(e.target.value);
+              }}
+              required
+            />
+            <input
+              type="email"
+              placeholder="Email(optional)"
+              value={email}
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
+            />
             <input type="checkbox" id="t&c" name="t&c" required />
             <label for="t&c"> Terms & Conditions</label>
             <br />
             <Button
-              onClick={() => {
-                setShow(true);
-              }}
               variant="outline"
+              // type="submit"
+
+              onClick={verify}
             >
               Register
             </Button>
-            <Button variant="outline">
-              <a href="/login" className="link">
-                Login
-              </a>
-            </Button>
+            {/* <Button variant="outline"> */}
+            <a href="/login" className="link">
+              Login
+            </a>
+            {/* </Button> */}
             {show && (
               <div>
-                <input type="number" placeholder="Enter OTP"
-                value={otp}
-                onChange={(e)=>{
-                  setOtp(e.target.value);
-                }}
+                <input
+                  type="number"
+                  placeholder="Enter OTP"
+                  value={otp}
+                  onChange={(e) => {
+                    setOtp(e.target.value);
+                  }}
                 />
-                <Button variant="outline" type="submit">Verify</Button>
+                <Button variant="outline" type="submit">
+                  Verify
+                </Button>
               </div>
             )}
           </form>

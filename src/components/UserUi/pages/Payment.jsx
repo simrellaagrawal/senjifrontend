@@ -2,17 +2,17 @@ import React from "react";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
-import UserHome from "./UserHome";
 import "./userpage.css";
 import Button from "react-bootstrap/Button";
 import { useNavigate } from "react-router-dom";
+import UserNav from "./UserNav";
 
 export default function Payment() {
   const navigate = useNavigate();
 
   return (
     <div>
-      <UserHome />
+      <UserNav />
       <Container className="plan">
         <h3>Plan</h3>
         <hr />

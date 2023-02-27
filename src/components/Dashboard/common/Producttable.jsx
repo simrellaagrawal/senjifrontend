@@ -16,7 +16,7 @@ const Producttable = () => {
   useEffect(() => {
     const fetchDetails = async () => {
       setLoading(true);
-      const res = await axios.get("/product/");
+      const res = await axios.get("http://localhost:5000/api/product/");
       const data = res.data;
       console.log(data);
       setDetails(data);
@@ -39,7 +39,8 @@ const Producttable = () => {
           </TableRow>
         </TableHead>
         <TableBody>
-          {details?.map((detail, index) => {
+          {details &&
+            details.map && details.map((detail, index) => {
             return (
               <TableRow
                 name="tabledata"

@@ -4,25 +4,35 @@ import Button from "react-bootstrap/esm/Button";
 import { useNavigate } from "react-router-dom";
 import "./login.css";
 import axios from "axios";
-
+import { useDispatch } from "react-redux";
+import { loginFailure, loginSuccess } from "../../redux/authSlice";
+import HomeNav from "../home/HomeNav";
 export default function AdminLogin() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError(false);
     try {
       axios
-        .post("/auth/admin-login", {
+        .post("http://localhost:5000/api/auth/admin-login", {
           email: email,
           password: password,
         })
         .then((response) => {
           navigate("/admin-dashboard");
         });
+      const admin = { email: email, password: password };
+      dispatch(loginSuccess(admin));
+
+      // if login fails, dispatch loginFailure action with error message
+      const error = "Invalid email or password";
+      dispatch(loginFailure(error));
+
       setEmail("");
       setPassword("");
     } catch (err) {
@@ -31,6 +41,7 @@ export default function AdminLogin() {
   };
   return (
     <>
+      <HomeNav />
       <div className="login">
         <div className="box">
           <h3>Sign In</h3>

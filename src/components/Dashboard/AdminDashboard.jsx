@@ -1,62 +1,36 @@
-import Col from "react-bootstrap/Col";
+import React from "react";
+import Button from "react-bootstrap/Button";
+import Container from "react-bootstrap/Container";
+import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
-import Row from "react-bootstrap/Row";
-import Tab from "react-bootstrap/Tab";
-import Dashboardtable from "./common/Dashboardtable";
-import Producttable from "./common/Producttable";
-import EnhancedTable from "./common/Usertable";
-import "./dashboard.css";
-import DashboardHome from "./pages/DashboardHome";
-function AdminDashboard() {
+import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
+function AdminNav() {
   return (
-    <Tab.Container id="left-tabs-example" defaultActiveKey="first">
-      <Row>
-        <Col lg={2}>
-          <div className="sidebar">
-            <h2>Sen Ji</h2>
-            <Nav variant="pills" className="flex-column">
-              <Nav.Item>
-                <Nav.Link eventKey="first">Dashboard</Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link eventKey="second">Users</Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link eventKey="third">Products</Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link eventKey="forth">Settings</Nav.Link>
-              </Nav.Item>
-              {/* <Nav.Item>
-                <Nav.Link eventKey="fifth">Profile</Nav.Link>
-              </Nav.Item> */}
-              {/* <Nav.Item>
-                <Nav.Link eventKey="sixth">Users</Nav.Link>
-              </Nav.Item> */}
-            </Nav> 
-          </div>
-        </Col>
-        <Col lg={10}>
-          <div className="content">
-            <Tab.Content>
-              <Tab.Pane eventKey="first">
-                <DashboardHome />
-              </Tab.Pane>
-              <Tab.Pane eventKey="second">
-                <Dashboardtable className="usertable" />
-              </Tab.Pane>
-              <Tab.Pane eventKey="third">
-                <Producttable />
-              </Tab.Pane>
-              <Tab.Pane eventKey="forth">Setting</Tab.Pane>
-              {/* <Tab.Pane eventKey="fifth">msdj</Tab.Pane>
-              <Tab.Pane eventKey="sixth">msdj</Tab.Pane> */}
-            </Tab.Content>
-          </div>
-        </Col>
-      </Row>
-    </Tab.Container>
+    <div className="adminnav">
+      <Navbar collapseOnSelect expand="lg">
+        <Container fluid>
+          <Navbar.Brand href="#">Sen Ji</Navbar.Brand>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav
+              className="me-auto justify-content-end flex-grow-1 pe-3"
+              // className="justify-content-end align-items-center flex-grow-1 pe-3 my-2 my-lg-0 me-auto"
+              // style={{ maxHeight: "100px" }}
+              navbarScroll
+            >
+              <Nav.Link href="/admin-dashboard">Dashboard</Nav.Link>
+              <Nav.Link href="/users">Users</Nav.Link>
+              <Nav.Link href="/products">Products</Nav.Link>
+              <Nav.Link href="#">Notification</Nav.Link>
+              <Nav.Link href="#">Upload</Nav.Link>
+              <Nav.Link href="#">Profile</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+    </div>
   );
 }
 
-export default AdminDashboard;
+export default AdminNav;

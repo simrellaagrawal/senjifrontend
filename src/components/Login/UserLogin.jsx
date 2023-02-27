@@ -4,6 +4,7 @@ import "./login.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
+import HomeNav from "../home/HomeNav";
 export default function UserLogin() {
   const [username, setUsername] = useState("");
   const [phone, setPhone] = useState("");
@@ -19,26 +20,37 @@ export default function UserLogin() {
     setError(false);
     try {
       axios
-        .post("/auth/login", {
-          username: username,
-          phone: phone,
+        .post("http://localhost:5000/api/auth/verify", {
           otp: otp,
         })
         .then((response) => {
           navigate("/dashboard");
         });
-      setUsername("");
-      setPhone("");
-      setOtp("");
+
+      // setUsername("");
+      // setPhone("");
+      // setOtp("");
     } catch (err) {
       setError(true);
     }
   };
+  const verify = () => {
+    setShow(true);
+    axios
+      .post("http://localhost:5000/api/auth/login", {
+        username: username,
+        phone: phone,
+      })
+      .then((response) => {
+        // navigate("/dashboard");
+        console.log(response);
+      });
+  };
 
   return (
     <>
+      <HomeNav />
       <div className="login">
-        {/* <h1>User Login</h1> */}
         <div className="box">
           <h3>Sign In</h3>
           <form onSubmit={handleSubmit}>
@@ -52,22 +64,16 @@ export default function UserLogin() {
               }}
             />
             <input
-              type="number"
-              placeholder="Phone number"
+              type="tel"
+              pattern="\+91\d{10}"
+              placeholder="+91 XXXXXXXXXX"
               required
               value={phone}
               onChange={(e) => {
                 setPhone(e.target.value);
               }}
             />
-            <Button
-              onClick={() => {
-                axios.post("/auth/verify");
-                setShow(true);
-                navigate("/dashboard");
-              }}
-              variant="outline"
-            >
+            <Button onClick={verify} variant="outline">
               Sign In
             </Button>
             {show && (

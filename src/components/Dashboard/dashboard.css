@@ -1,43 +1,31 @@
-.content {
-}
-.sidebar {
-  padding: 50px 5px 0px;
-  background-color: #f1dbbf;
-  height: 100%;
-}
-
-.sidebar h2 {
-  font-family: "Dancing Script", cursive;
+.adminnav .navbar-brand {
   font-weight: 700;
-  /* text-transform: uppercase; */
-  text-align: center;
-}
-.sidebar .nav {
-  padding: 40px 0px;
-}
-.sidebar .nav-link {
-  color: #aa5656;
-  font-weight: 100;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-  letter-spacing: 1px;
-}
-.sidebar .nav-link:hover {
-  background-color: #aa5656a4;
+  /* font-family: "Dancing Script", cursive; */
+  font-family: "Lobster", cursive;
+
+  font-size: 35px;
+  padding-left: 30px;
   color: #f1dbbf;
 }
-.sidebar .nav-pills .nav-link.active {
+.adminnav .navbar {
   background-color: #aa5656;
 }
-.nav-link:focus {
-  background-color: #aa5656;
+.adminnav .nav-link {
+  color: #f1dbbf;
+  font-size: 20px;
+  font-family: "Times New Roman", Times, serif;
 }
-.sidebar .nav-item {
-  padding: 5px 0px;
+.adminnav .me-auto{
+  margin: auto;
+}
+.adminnav .btn:hover {
+  background-color: #f1dbbf;
+  border: 0px;
+  color: #aa5656;
 }
 /* Dashboard */
 .dashboard {
-  /* padding-top: 30px; */
+  padding: 0 15px 20px;
 }
 .dashboard .box {
   width: 100%;
@@ -80,7 +68,8 @@
   border: 1px solid #f1dbbf;
   border-radius: 5px;
 }
-.charts .area-top , .dashtables .area-top{
+.charts .area-top,
+.dashtables .area-top {
   background: #f1dbbf;
 }
 .charts hr,
@@ -92,6 +81,7 @@
 }
 .charts .area {
   /* padding: 20px; */
+  /* width: 100%; */
   margin: 20px 0 0 10px;
 }
 .charts p,
@@ -102,7 +92,7 @@
   font-size: 18px;
   color: #698269;
 }
-.dashtable .table{
+.dashtable .table {
   margin: 0;
   box-shadow: none;
   border-radius: 0px;
